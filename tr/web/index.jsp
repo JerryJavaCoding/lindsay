@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-  response.sendRedirect("translator/gotologin");
+  response.sendRedirect("translator/index");
 %>
 
 </body>

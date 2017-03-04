@@ -1,6 +1,7 @@
 ﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE HTML>
 <html>
+<base href="${CONTEXT_PATH}/"/>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

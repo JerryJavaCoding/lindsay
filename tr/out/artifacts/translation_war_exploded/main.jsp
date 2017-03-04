@@ -14,6 +14,6 @@
 <a href="/2/gotomain" >登录</a></td>
 </tr>
 </tr>
-</c:forEach>
+
 </body>
 </html>

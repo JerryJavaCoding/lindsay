@@ -13,9 +13,11 @@ import java.util.List;
  * Created by Administrator on 2017/2/14.
  */
 public class AdminController extends Controller {
-
-    public void gotologin(){
+    public void index(){
         render("index.jsp");
+    }
+    public void gotologin(){
+        render("login.jsp");
     }
     public void gotomain(){
         render("index.jsp");

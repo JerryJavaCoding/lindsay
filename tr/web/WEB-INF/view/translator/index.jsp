@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE HTML>
 <html>
+<base href="${CONTEXT_PATH}/"/>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,28 +24,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Themify Icons-->
-	<link rel="stylesheet" href="css/themify-icons.css">
+	<link rel="stylesheet" href="/css/themify-icons.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="./js/modernizr-2.6.2.min.js"></script>
 
-	<script src="js/respond.min.js"></script>
+	<script src="./js/respond.min.js"></script>
 
 
 	</head>
@@ -67,7 +68,7 @@
 			
 		</div>
 	</nav>
-	
+
 	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(images/timg.jpg)">
 		<div class="overlay"></div>
 		<div class="gtco-container">

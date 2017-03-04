@@ -12,6 +12,7 @@
 <head>
   <title>数据列表</title>
 </head>
+<base href="${CONTEXT_PATH}/"/>
 <div class="table_box">
   <table class="list" border="1">
     <tbody>
