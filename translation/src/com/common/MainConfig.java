@@ -1,7 +1,7 @@
 package com.common;
 
 import com.controller.IndexController;
-import com.controller.UserController;
+import com.controller.AdminController;
 import com.interceptor.AuthenticationInterceptor;
 import com.jfinal.config.*;
 import com.jfinal.kit.PropKit;
@@ -9,7 +9,10 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
-import com.model.User;
+import com.model.Admin;
+import com.model.Foreigner;
+import com.model.Translator;
+
 
 import java.lang.*;
 
@@ -27,11 +30,11 @@ public class MainConfig extends JFinalConfig {
     }
 
     public void configRoute(Routes me) {
-        //ËùÓÐµÄÒ³Ãæ´úÂëjsp¶¼·ÅÔÚÕâÀï
+        //ï¿½ï¿½ï¿½Ðµï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½jspï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         me.setBaseViewPath("/WEB-INF/view");
-        //Ä¬ÈÏ×Ô¶¯Ìøµ½µÇÂ¼Ò³
+        //Ä¬ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼Ò³
         me.add("/", IndexController.class);
-        me.add("/user", UserController.class);
+        me.add("/translator", AdminController.class);
     }
 
     public void configEngine(Engine me) {
@@ -42,14 +45,16 @@ public class MainConfig extends JFinalConfig {
         C3p0Plugin c3p0Plugin = new C3p0Plugin(PropKit.get("jdbcUrl"), PropKit.get("user"), PropKit.get("password"));
         ActiveRecordPlugin arp = new ActiveRecordPlugin(c3p0Plugin);
         arp.setShowSql(true);
-        //×¢ÒâÕâÀï´óÐ¡Ð´Ãô¸Ð£¬ÒªÏñÕâÑùÐ´
-        arp.addMapping("user","Id", User.class);
+        //×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Ð´ï¿½ï¿½ï¿½Ð£ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´
+        arp.addMapping("admin","Id", Admin.class);
+        arp.addMapping("translator","Id", Translator.class);
+        arp.addMapping("foreigner","Id", Foreigner.class);
         me.add(c3p0Plugin);
         me.add(arp);
     }
 
     /**
-     * À¹½ØÆ÷´úÂë·ÅÔÚÕâÀï£¬ÑéÖ¤ÓÃ»§ÊÇ·ñµÇÂ¼,ÏêÇé¿´ÊÖ²áAOPÕÂ½Ú
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½Ö¤ï¿½Ã»ï¿½ï¿½Ç·ï¿½ï¿½Â¼,ï¿½ï¿½ï¿½é¿´ï¿½Ö²ï¿½AOPï¿½Â½ï¿½
      * @param me
      */
     public void configInterceptor(Interceptors me) {
