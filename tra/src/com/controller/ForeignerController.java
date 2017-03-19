@@ -40,6 +40,8 @@ public class ForeignerController extends Controller {
         render("updatefinfo.jsp");
     }//更新个人资料
     public void gotoforder(){
+        List forders = Forder.dao.find("SELECT * FROM forder");
+        setAttr("forders",forders);
         render("forder.jsp");
     }
     public void addorder(){

@@ -97,7 +97,7 @@
 		</div>
 	</nav>
 	
-	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(images/timg.jpg)">
+	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(/images/timg.jpg)">
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row">
@@ -108,7 +108,7 @@
 								<div class="tab">
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
-											<c:forEach var="foreigner" items="${requestScope.foreigners}">
+											<c:forEach var="foreigner" items="${requestScope.forders}">
 											<form action="/foreigner/addorder/${foreigner.Id}">
 												<div class="col-md-12">
 													<label for="foreignerid">User Id</label>

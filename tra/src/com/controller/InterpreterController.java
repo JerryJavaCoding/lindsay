@@ -71,7 +71,8 @@ public class InterpreterController extends Controller {
         Forder forder=getModel(Forder.class);
         forder.update();
         System.out.println("修改成功");
-        render("myorder.jsp");//接单
+//        render("myorder.jsp");//接单
+        index();
     }
     public void myorder(){
         List forders = Forder.dao.find("SELECT * FROM forder where Id = "+getParaToInt()+" and dealing='已接单'");

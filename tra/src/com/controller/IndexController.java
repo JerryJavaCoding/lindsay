@@ -47,6 +47,7 @@ public class IndexController extends Controller {
         }else{
             List admin  = Admin.dao.find("SELECT * FROM admin WHERE username = '" + name + "' AND pwd = '" + password + "'");
             if (admin.size() > 0) {
+                setSessionAttr("admin", admin.get(0));
                 System.out.println("登录成功");
 
                 redirect("/admin/index");
