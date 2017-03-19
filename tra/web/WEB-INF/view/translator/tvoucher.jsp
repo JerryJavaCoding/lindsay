@@ -1,7 +1,7 @@
 ﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
-<html>
+<html>  <base href="${CONTEXT_PATH}/"/>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,7 +77,7 @@
 							<a href="#">用户安全</a>
 							<ul class="dropdown">
 								<li><a href="/translator/dotinfo">个人资料</a></li>
-								<li><a href="#">账号安全</a></li>
+								<li><a href="/translator/dotsafe/${sessionScope.translator.Id}">账号安全</a></li>
 							</ul>
 						</li>
                         <li class="has-dropdown ">

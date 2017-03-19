@@ -1,9 +1,6 @@
 package com.common;
 
-import com.controller.ForeignerController;
-import com.controller.IndexController;
-import com.controller.AdminController;
-import com.controller.InterpreterController;
+import com.controller.*;
 import com.interceptor.AuthenticationInterceptor;
 import com.jfinal.config.*;
 import com.jfinal.ext.handler.ContextPathHandler;

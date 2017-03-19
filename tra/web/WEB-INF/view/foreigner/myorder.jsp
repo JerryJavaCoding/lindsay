@@ -10,6 +10,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <base href="${CONTEXT_PATH}/"/>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>My Order</title>
@@ -95,7 +96,7 @@
                   <li><a href="#">信用评级</a></li>
                 </ul>
               </li>
-              <li class="btn-cta"><a href="/admin/gotologin"><span>Quit</span></a></li>
+              <li class="btn-cta"><a href="/gotologin"><span>Quit</span></a></li>
             </ul>
           </div>
         </div>
@@ -114,7 +115,7 @@
                   <div class="tab">
                     <div class="tab-content">
                       <div class="tab-content-inner active" data-content="signup">
-                        <c:forEach var="foreigner" items="${requestScope.foreigners}">
+                        <c:forEach var="foreigner" items="${requestScope.forders}">
                         <form action="/foreigner/selectorder/${foreigner.Id}">
                           </c:forEach>
                           <div class="table_box">

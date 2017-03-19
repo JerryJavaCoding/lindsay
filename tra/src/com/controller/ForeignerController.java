@@ -12,6 +12,13 @@ import java.util.List;
  * Created by 宋琳琳 on 2017/3/7 0007.
  */
 public class ForeignerController extends Controller {
+    public void index(){
+        Foreigner foreigner= (Foreigner) getSession().getAttribute("foreigner");
+        int id=foreigner.get("Id");
+        List forders = Forder.dao.find("SELECT * FROM forder WHERE fid="+id);
+        setAttr("forders",forders);
+        render("myorder.jsp");
+    }
     public void gotoinfo(){
         List foreigners = Foreigner.dao.find("SELECT * FROM foreigner WHERE Id="+getParaToInt()+"");
         setAttr("foreigners",foreigners);

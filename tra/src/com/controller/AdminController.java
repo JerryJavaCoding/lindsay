@@ -15,50 +15,16 @@ import java.util.List;
  */
 public class AdminController extends Controller {
     public void index(){
-        render("index.jsp");
+        List transalators = Translator.dao.find("SELECT * FROM translator");
+        setAttr("transalators",transalators);
+        render("atinfo.jsp");
     }
-    public void gotologin(){render("index.jsp");}
+
 
     public void gotoupdate() { render("updatetinfo.jsp");}
+    public void gotologin(){render("index.jsp");}
 
 
-
-    public void tologin(){
-        String name = getPara("name");
-        String password = getPara("password");
-        String person = getPara("person");//获取单选按钮的角色
-        if(person.equals("Interpreter")){
-            List translators = Translator.dao.find("SELECT * FROM translator WHERE tname = '" + name + "' AND tpwd = '" + password + "'");
-            setAttr("translators", translators);
-            if(translators.size() > 0){
-                System.out.println("登录成功");
-              render("dotlmiddle.jsp");//跳转到翻译员登录的中间页面
-            }else{
-                System.out.println("登录失败");
-                gotologin();
-            }
-          //  gotoinfo();
-        }else if(person.equals("Foreigner")){
-            List foreigners = Foreigner.dao.find("SELECT * FROM foreigner WHERE fname = '" + name + "' AND fpwd = '" + password + "'");
-            setAttr("foreigners",foreigners);
-            if (foreigners.size() > 0) {
-                System.out.println("登录成功");
-                render("dofmiddle.jsp");//跳转到外商登录的中间页面
-            } else {
-                System.out.println("登录失败");
-            }
-        }else{
-            List admin  =Admin.dao.find("SELECT * FROM admin WHERE username = '" + name + "' AND pwd = '" + password + "'");
-            if (admin.size() > 0) {
-                System.out.println("登录成功");
-                List transalators = Translator.dao.find("SELECT * FROM translator");
-                setAttr("transalators",transalators);
-                render("atinfo.jsp");
-            } else {
-                System.out.println("登录失败");
-            }
-        }
-    }
 
 
     /**

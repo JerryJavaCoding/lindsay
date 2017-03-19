@@ -9,6 +9,7 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE HTML>
 <html>
+<base href="${CONTEXT_PATH}/"/>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,8 +85,8 @@
               <li class="has-dropdown">
                 <a href="#">用户安全</a>
                 <ul class="dropdown">
-                  <li><a href="/translator/gotoinfo/${translator.Id}">个人资料</a></li>
-                  <li><a href="#">账号安全</a></li>
+                  <li><a href="/translator/gotoinfo/${sessionScope.translator.Id}">个人资料</a></li>
+                  <li><a href="/translator/dotsafe/${sessionScope.translator.Id}">账号安全</a></li>
                 </ul>
               </li>
               <li class="has-dropdown ">

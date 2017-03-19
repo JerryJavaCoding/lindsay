@@ -4,6 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <base href="${CONTEXT_PATH}/"/>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Safe</title>
@@ -88,7 +89,7 @@
                   <li><a href="#">信用评级</a></li>
                 </ul>
               </li>
-              <li class="btn-cta"><a href="/admin/gotologin"><span>Quit</span></a></li>
+              <li class="btn-cta"><a href="/gotologin"><span>Quit</span></a></li>
             </ul>
           </div>
         </div>

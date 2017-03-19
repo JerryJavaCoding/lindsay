@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
+<base href="${CONTEXT_PATH}/"/>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,7 +88,7 @@
                   <li><a href="#">信用评级</a></li>
                 </ul>
               </li>
-              <li class="btn-cta"><a href="/admin/gotologin"><span>Quit</span></a></li>
+              <li class="btn-cta"><a href="/gotologin"><span>Quit</span></a></li>
             </ul>
           </div>
         </div>

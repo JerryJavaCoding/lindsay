@@ -2,6 +2,7 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE HTML>
 <html>
+<base href="${CONTEXT_PATH}/"/>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,15 +71,15 @@
 						<li class="has-dropdown">
 							<a href="#">交易管理</a>
 							<ul class="dropdown">
-								<li><a href="/foreigner/selectorder/${foreigner.Id}">我的订单</a></li>
+								<li><a href="/foreigner/selectorder/${sessionScope.foreigner.Id}">我的订单</a></li>
 								<li><a href="/foreigner/gotoforder">发布订单</a></li>
 							</ul>
 						</li>
                         <li class="has-dropdown">
 							<a href="#">用户安全</a>
 							<ul class="dropdown">
-								<li><a href="/foreigner/gotoinfo/${foreigner.Id}">个人资料</a></li>
-								<li><a href="/foreigner/updatefpwd/${foreigner.Id}">账号安全</a></li>
+								<li><a href="/foreigner/gotoinfo/${sessionScope.foreigner.Id}">个人资料</a></li>
+								<li><a href="/foreigner/updatefpwd/${sessionScope.foreigner.Id}">账号安全</a></li>
 							</ul>
 						</li>
                         <li class="has-dropdown ">
@@ -88,7 +89,7 @@
 								<li><a href="#">信用评级</a></li>
 							</ul>
 						</li>
-						<li class="btn-cta"><a href="/admin/gotologin"><span>Quit</span></a></li>
+						<li class="btn-cta"><a href="/gotologin"><span>Quit</span></a></li>
 					</ul>
 				</div>
 			</div>

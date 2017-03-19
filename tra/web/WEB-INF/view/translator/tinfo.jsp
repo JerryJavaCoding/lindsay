@@ -82,14 +82,14 @@
 							<a href="#">用户安全</a>
 							<ul class="dropdown">
 								<li><a href="#">个人资料</a></li>
-								<li><a href="/translator/updatetpwd/${translator.Id}">账号安全</a></li>
+								<li><a href="/translator/updatetpwd/${sessionScope.translator.Id}">账号安全</a></li>
 							</ul>
 						</li>
                         <li class="has-dropdown ">
 							<a href="#">账号中心</a>
 							<ul class="dropdown">
 								<c:forEach var="translator" items="${requestScope.translators}">
-								<li><a href="/translator/dotvoucher/${translator.Id}">我的现金券</a></li>
+								<li><a href="/translator/dotvoucher/${sessionScope.translator.Id}">我的现金券</a></li>
 								</c:forEach>
 								<li><a href="#">信用评级</a></li>
 							</ul>

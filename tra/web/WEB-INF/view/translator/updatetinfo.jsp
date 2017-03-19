@@ -80,7 +80,7 @@
                 <a href="#">用户安全</a>
                 <ul class="dropdown">
                   <li><a href="#">个人资料</a></li>
-                  <li><a href="/traslator/dotsafe">账号安全</a></li>
+                  <li><a href="/translator/dotsafe/${sessionScope.translator.Id}">账号安全</a></li>
                 </ul>
               </li>
               <li class="has-dropdown ">
@@ -110,7 +110,7 @@
                     <div class="tab-content">
                       <div class="tab-content-inner active" data-content="signup">
                         <c:forEach var="translator" items="${requestScope.translators}">
-                        <form action="/translator/dottupdate/${translator.Id}" method="post">
+                        <form action="/translator/dottupdate/${sessionScope.translator.Id}" method="post">
 
                             <div class="col-md-12">
                               <label for="userid">User Id</label>

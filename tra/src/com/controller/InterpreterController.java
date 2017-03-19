@@ -17,6 +17,15 @@ import java.util.function.IntConsumer;
  */
 
 public class InterpreterController extends Controller {
+    public void index(){
+        Translator translator= (Translator) getSession().getAttribute("translator");
+        int id=translator.get("Id");
+        List forders = Forder.dao.find("SELECT * FROM forder where Id = "+id+" and dealing='已接单'");
+        setAttr("forders",forders);
+        List foreigners = Foreigner.dao.find("SELECT * FROM foreigner where Id =(SELECT fid FROM forder where Id = "+id+")");
+        setAttr("foreigners",foreigners);
+        render("myorder.jsp");//跳转到翻译员登录的中间页面
+    }
     public void gotoinfo(){
         List translators = Translator.dao.find("SELECT translator.tname,translator.Id,translator.tidno,translator.tsex," +
                 "translator.tage,translator.tel,translator.temail,translator.tlanguage,certificate.cname," +
@@ -71,7 +80,7 @@ public class InterpreterController extends Controller {
         setAttr("foreigners",foreigners);
         render("myorder.jsp");//查询已接订单
     }
-    public void updatetpwd(){
+    public void dotsafe(){
         Translator translator=getModel(Translator.class);
         translator.update();
         System.out.println("修改成功");

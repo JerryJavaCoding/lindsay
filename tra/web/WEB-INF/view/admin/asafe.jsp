@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <html>
+<base href="${CONTEXT_PATH}/"/>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,7 +98,7 @@
                   <li><a href="#">信用评级管理</a></li>
                 </ul>
               </li>
-              <li class="btn-cta"><a href="/admin/gotologin"><span>退出</span></a></li>
+              <li class="btn-cta"><a href="/index"><span>退出</span></a></li>
 
             </ul>
           </div>

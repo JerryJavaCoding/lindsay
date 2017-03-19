@@ -3,6 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <base href="${CONTEXT_PATH}/"/>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Voucher</title>
@@ -96,7 +97,7 @@
                   <li><a href="#">信用评级管理</a></li>
                 </ul>
               </li>
-              <li class="btn-cta"><a href="/admin/gotologin"><span>退出</span></a></li>
+              <li class="btn-cta"><a href="/index"><span>退出</span></a></li>
             </ul>
           </div>
         </div>

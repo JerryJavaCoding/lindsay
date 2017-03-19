@@ -73,7 +73,7 @@
                 <a href="#">交易管理</a>
                 <ul class="dropdown">
 
-                  <li><a href="#">我的订单</a></li>
+                  <li><a href="/translator/myorder/${translator.Id}">我的订单</a></li>
                   <li><a href="/translator/business">我要接单</a></li>
                 </ul>
               </li>
@@ -81,13 +81,13 @@
                 <a href="#">用户安全</a>
                 <ul class="dropdown">
                   <li><a href="#">个人资料</a></li>
-                  <li><a href="/translator/dotsafe/${translator.Id}">账号安全</a></li>
+                  <li><a href="/translator/dotsafe/${sessionScope.translator.Id}">账号安全</a></li>
                 </ul>
               </li>
               <li class="has-dropdown ">
                 <a href="#">账号中心</a>
                 <ul class="dropdown">
-                  <li><a href="/translator/dotvoucher/${translator.Id}">我的现金券</a></li>
+                  <li><a href="/translator/dotvoucher/${sessionScope.translator.Id}">我的现金券</a></li>
                   <li><a href="#">信用评级</a></li>
                 </ul>
               </li>
