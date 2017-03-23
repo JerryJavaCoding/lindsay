@@ -62,37 +62,7 @@
     <nav class="gtco-nav" role="navigation">
       <div class="gtco-container">
 
-        <div class="row">
-          <div class="col-sm-4 col-xs-12">
-            <div id="gtco-logo"><a href="index.html">Glorater <em>.</em></a></div>
-          </div>
-          <div class="col-xs-8 text-right menu-1">
-            <ul>
-              <li class="has-dropdown">
-                <a>Transaction Management</a>
-                <ul class="dropdown">
-                  <li><a href="/foreigner/selectorder/${foreigner.Id}">My Order</a></li>
-                  <li><a href="/foreigner/gotoforder">Order Releasing</a></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <a>User Security</a>
-                <ul class="dropdown">
-                  <li><a href="/foreigner/gotoinfo/${foreigner.Id}">About Me</a></li>
-                  <li><a href="/foreigner/updatefpwd/${foreigner.Id}">Security Account</a></li>
-                </ul>
-              </li>
-              <li class="has-dropdown ">
-                <a>Account Center</a>
-                <ul class="dropdown">
-                  <li><a href="/foreigner/dofvoucher/${foreigner.Id}">My Voucher</a></li>
-                  <li><a href="#">Credit Rating</a></li>
-                </ul>
-              </li>
-              <li class="btn-cta"><a href="/gotologin"><span>Quit</span></a></li>
-            </ul>
-          </div>
-        </div>
+
 
       </div>
     </nav>
@@ -108,21 +78,7 @@
                   <div class="tab">
                     <div class="tab-content">
                       <div class="tab-content-inner active" data-content="signup">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <img src="images/payment.jpg" style="width:100%;">
                       </div>
 
 
@@ -137,8 +93,8 @@
         </div>
       </div>
     </header>
-	
-	
+
+
 						<span class="icon">
 					<i class="ti-announcement"></i></span></div>
 </div>

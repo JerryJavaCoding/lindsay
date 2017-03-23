@@ -24,7 +24,7 @@
         <a href="#">账号中心</a>
         <ul class="dropdown">
           <li><a href="/foreigner/dofvoucher/${foreigner.Id}">我的现金券</a></li>
-          <li><a href="#">信用评级</a></li>
+          <li><a href="/foreigner/gotocredit/${foreigner.Id}">信用评级</a></li>
         </ul>
       </li>
       <li class="btn-cta"><a href="/gotologin"><span>Quit</span></a></li>

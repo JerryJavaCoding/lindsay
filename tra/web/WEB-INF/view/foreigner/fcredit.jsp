@@ -3,8 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <html>
-<base href="${CONTEXT_PATH}/"/>
 <head>
+  <base href="${CONTEXT_PATH}/"/>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Safe</title>
@@ -62,40 +62,7 @@
     <nav class="gtco-nav" role="navigation">
       <div class="gtco-container">
 
-        <div class="row">
-          <div class="col-sm-4 col-xs-12">
-            <div id="gtco-logo"><a href="index.html">Glorater <em>.</em></a></div>
-          </div>
-          <div class="col-xs-8 text-right menu-1">
-            <ul>
-              <li class="has-dropdown">
-                <a href="#">交易管理</a>
-                <ul class="dropdown">
-                  <c:forEach var="translator" items="${requestScope.translators}">
-                    <li><a href="/translator/myorder/${translator.Id}">我的订单</a></li>
-                  </c:forEach>
-                  <li><a href="/translator/business">我要接单</a></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <a href="#">用户安全</a>
-                <ul class="dropdown">
-                  <li><a href="/translator/gotoinfo/${sessionScope.translator.Id}">个人资料</a></li>
-                  <li><a href="/translator/dotsafe/${sessionScope.translator.Id}">账号安全</a></li>>
-                </ul>
-              </li>
-              <li class="has-dropdown ">
-                <a href="#">账号中心</a>
-                <ul class="dropdown">
-                  <li><a href="/translator/dotvoucher/${sessionScope.translator.Id}">我的现金券</a></li>
-                  <li><a href="#">信用评级</a></li>
-                </ul>
-              </li>
-              <li class="btn-cta"><a href="#"><span>Quit</span></a></li>
-            </ul>
-          </div>
-        </div>
-
+      <jsp:include page="./nav.jsp"/>
       </div>
     </nav>
 
@@ -111,8 +78,9 @@
                     <div class="tab-content">
                       <div class="tab-content-inner active" data-content="signup">
 
-
-
+                        <div>信息完整度:${infoPercent}</div>
+                        <div>成交历史订单数:${compOrderNum}</div>
+                        <div>综合得分：信息完整度*0.7+历史订单数*0.3=${finalScore}</div>
 
 
 
