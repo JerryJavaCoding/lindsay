@@ -6,6 +6,7 @@ import com.jfinal.plugin.activerecord.Record;
 import com.model.*;
 
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -48,7 +49,9 @@ public class ForeignerController extends Controller {
         Forder forder = getModel(Forder.class);
         forder.save();
         System.out.println("订单添加成功");
-        render("myorder.jsp");
+//        render("myorder.jsp");
+        Foreigner foreigner = getSessionAttr("foreigner");
+        redirect("/foreigner/selectorder/"+foreigner.get("Id"));
         }
 
     public void selectorder(){

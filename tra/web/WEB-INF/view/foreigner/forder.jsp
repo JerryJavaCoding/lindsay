@@ -61,39 +61,10 @@
 	<div class="page-inner">
 	<nav class="gtco-nav" role="navigation">
 		<div class="gtco-container">
-			
-			<div class="row">
-				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="#">Glorater <em>.</em></a></div>
-				</div>
-				<div class="col-xs-8 text-right menu-1">
-					<ul>
-						<li class="has-dropdown">
-							<a href="#">交易管理</a>
-							<ul class="dropdown">
-								<li><a href="/foreigner/selectorder/${sessionScope.foreigner.Id}">我的订单</a></li>
-								<li><a href="/foreigner/gotoforder">发布订单</a></li>
-							</ul>
-						</li>
-                        <li class="has-dropdown">
-							<a href="#">用户安全</a>
-							<ul class="dropdown">
-								<li><a href="/foreigner/gotoinfo/${sessionScope.foreigner.Id}">个人资料</a></li>
-								<li><a href="/foreigner/updatefpwd/${sessionScope.foreigner.Id}">账号安全</a></li>
-							</ul>
-						</li>
-                        <li class="has-dropdown ">
-							<a href="#">账号中心</a>
-							<ul class="dropdown">
-								<li><a href="/foreigner/dofvoucher">我的现金券</a></li>
-								<li><a href="#">信用评级</a></li>
-							</ul>
-						</li>
-						<li class="btn-cta"><a href="/gotologin"><span>Quit</span></a></li>
-					</ul>
-				</div>
-			</div>
-			
+
+			<jsp:include page="./nav.jsp"/>
+
+
 		</div>
 	</nav>
 	
@@ -108,42 +79,48 @@
 								<div class="tab">
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
-											<c:forEach var="foreigner" items="${requestScope.forders}">
-											<form action="/foreigner/addorder/${foreigner.Id}">
-												<div class="col-md-12">
+
+											<form action="/foreigner/addorder">
+												<%--<div class="col-md-12">
 													<label for="foreignerid">User Id</label>
 													<input type="text" class="form-control" id="foreignerid" name="foreigner.Id" readonly value="${foreigner.Id}">
-												</div>
+												</div>--%>
 
 												<div class= "col-md-12">
                                                     <label for="datepicker">Date</label>
-                                                    <input type="text" class="form-control" id="datepicker" name="order.date">
+                                                    <input type="date" class="form-control" id="datepicker" name="forder.date">
                                              	 </div>
                                                 <div class="col-md-12">
                                                     <label for="work">Work</label>
-                                                    <input type="text" class="form-control" id="work" name="order.work" >
+                                                    <input type="text" class="form-control" id="work" name="forder.work" >
                                                 </div>	
                                                  <div class="col-md-12">
                                                     <label for="description">Description</label>
-                                                    <textarea id="description" name="order.description"></textarea>
+                                                    <textarea id="description" name="forder.description"></textarea>
                                                 </div>	
                                                  <div class="col-md-12">
                                                     <label for="request">Request</label>
-                                                    <input type="text" class="form-control" id="request" name="order.request" >
-                                                </div>	
+													 <select name="forder.request">
+														 <option value="熟练">熟练</option>
+														 <option value="精通">精通</option>
+													 </select>
+                                                </div>
                                                  <div class="col-md-12">
                                                     <label for="language">Language</label>
-                                                    <input type="text" class="form-control" id="language" name="order.language" >
-                                                </div>	
+													 <select name="forder.language">
+														 <option value="en">en</option>
+														 <option value="cn">cn</option>
+													 </select>
+												 </div>
                                                  <div class="col-md-12">
                                                     <label for="salary">Salary</label>
-                                                    <input type="text" class="form-control" id="salary" name="order.salary">
+                                                    <input type="number" class="form-control" id="salary" name="forder.salary">
                                                 </div>	
                                                 	
                                                 <div class="col-md-12 mgt10">
                                					 <div class="col-md-6"><input type="submit" class="btn btn-primary" value="OK"></div>
                                                 </div>
-												</c:forEach>
+
 											</form>
 
 										</div>

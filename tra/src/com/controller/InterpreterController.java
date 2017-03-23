@@ -62,22 +62,23 @@ public class InterpreterController extends Controller {
     }
     public void selectorder(){
         List forders = Forder.dao.find("SELECT * FROM forder where Id = "+getParaToInt()+"");
-        setAttr("forders",forders);
+        setAttr("forder",forders.get(0));
         List foreigners = Foreigner.dao.find("SELECT * FROM foreigner where Id =(SELECT fid FROM forder where Id = "+getParaToInt()+")");
-        setAttr("foreigners",foreigners);
+        setAttr("foreigner",foreigners.get(0));
         render("selectorder.jsp");//订单详情
     }
     public void dealorder(){
         Forder forder=getModel(Forder.class);
+        forder.set("dealing","已接单");
         forder.update();
         System.out.println("修改成功");
 //        render("myorder.jsp");//接单
         index();
     }
     public void myorder(){
-        List forders = Forder.dao.find("SELECT * FROM forder where Id = "+getParaToInt()+" and dealing='已接单'");
+        List forders = Forder.dao.find("SELECT * FROM forder where trid = "+getParaToInt()+" and dealing='已接单'");
         setAttr("forders",forders);
-        List foreigners = Foreigner.dao.find("SELECT * FROM foreigner where Id =(SELECT fid FROM forder where Id = "+getParaToInt()+")");
+        List foreigners = Foreigner.dao.find("SELECT * FROM foreigner where Id in (SELECT fid FROM forder where trid = "+getParaToInt()+")");
         setAttr("foreigners",foreigners);
         render("myorder.jsp");//查询已接订单
     }

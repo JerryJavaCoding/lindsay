@@ -62,43 +62,8 @@
 	<div class="page-inner">
 	<nav class="gtco-nav" role="navigation">
 		<div class="gtco-container">
-			
-			<div class="row">
-				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.jsp">Glorater <em>.</em></a></div>
-				</div>
-				<div class="col-xs-8 text-right menu-1">
-					<ul>
-						<li class="has-dropdown">
-							<a href="#">交易管理</a>
-							<ul class="dropdown">
-								<c:forEach var="translator" items="${requestScope.translators}">
-								<li><a href="/translator/myorder/${translator.Id}">我的订单</a></li>
-								</c:forEach>
-								<li><a href="/translator/business">我要接单</a></li>
-							</ul>
-						</li>
-                        <li class="has-dropdown">
-							<a href="#">用户安全</a>
-							<ul class="dropdown">
-								<li><a href="#">个人资料</a></li>
-								<li><a href="/translator/updatetpwd/${sessionScope.translator.Id}">账号安全</a></li>
-							</ul>
-						</li>
-                        <li class="has-dropdown ">
-							<a href="#">账号中心</a>
-							<ul class="dropdown">
-								<c:forEach var="translator" items="${requestScope.translators}">
-								<li><a href="/translator/dotvoucher/${sessionScope.translator.Id}">我的现金券</a></li>
-								</c:forEach>
-								<li><a href="#">信用评级</a></li>
-							</ul>
-						</li>
-						<li class="btn-cta"><a href="#"><span>Quit</span></a></li>
-					</ul>
 
-				</div>
-			</div>
+			<jsp:include page="./nav.jsp"/>
 			
 		</div>
 	</nav>
