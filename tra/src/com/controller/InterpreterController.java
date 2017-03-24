@@ -18,6 +18,7 @@ import java.util.function.IntConsumer;
  */
 
 public class InterpreterController extends Controller {
+
     public void index(){
         Translator translator= (Translator) getSession().getAttribute("translator");
         int id=translator.get("Id");
@@ -30,16 +31,17 @@ public class InterpreterController extends Controller {
 
     }
     public void gotoinfo(){
-        List translators = Translator.dao.find("SELECT translator.tname,translator.Id,translator.tidno,translator.tsex," +
-                "translator.tage,translator.tel,translator.temail,translator.tlanguage,certificate.cname," +
-                "certificate.cpic FROM translator,certificate WHERE translator.Id=certificate.tId and translator.Id="+getParaToInt()+"");
-        setAttr("translators",translators);
+        Translator translator = Translator.dao.findById(getParaToInt());
+        setAttr("translator", translator);
         render("tinfo.jsp");
     }
 
     public void dotorder() {render("torder.jsp");}
 
     public void docpic(){
+        Translator translator = (Translator) getSession().getAttribute("translator");
+        List<Certificate> certificates = Certificate.dao.find("select * from certificate where tid=" + translator.get("Id"));
+        setAttr("certificates", certificates);
         render("cpic.jsp");
     }
 

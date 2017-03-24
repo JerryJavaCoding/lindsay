@@ -44,7 +44,7 @@ public class IndexController extends Controller {
                 System.out.println("登录失败");
                 render("index.jsp?error=true");
             }
-        }else{
+        } else if (person.equals("Administrator")) {
             List admin  = Admin.dao.find("SELECT * FROM admin WHERE username = '" + name + "' AND pwd = '" + password + "'");
             if (admin.size() > 0) {
                 setSessionAttr("admin", admin.get(0));

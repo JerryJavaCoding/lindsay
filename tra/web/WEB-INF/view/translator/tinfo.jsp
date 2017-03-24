@@ -79,7 +79,7 @@
 								<div class="tab">
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
-											<c:forEach var="translator" items="${requestScope.translators}">
+
 											<form action="/translator/dotupdate/${translator.Id}" method="post">
 												<div class="col-md-12">
 													<label for="userid">User Id</label>
@@ -126,7 +126,7 @@
                                                      <div class="col-md-6 col-xs-6"><input type="submit" class="btn btn-primary" value="修改"></div>
 
                                                 </div>
-													</c:forEach>
+
 											</form>	
 										</div>
 

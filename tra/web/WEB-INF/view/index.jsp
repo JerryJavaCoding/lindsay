@@ -102,7 +102,8 @@
                                                     </div>
 
                                                 <div class="inter">
-                                                    <form action="/admin/dotregister" method="post">
+                                                    <form action="/admin/dotregister" method="post"
+                                                          enctype="multipart/form-data">
                                                         <div class="col-md-12">
                                                         <label for="tname">Username</label>
                                                         <input type="text" class="form-control" id="tname" name="translator.tname">
@@ -141,11 +142,12 @@
                                                     </div>
                                                      <div class="col-md-12">
                                                         <label for="cname">Certificate Name</label>
-                                                        <input type="text" class="form-control" id="cname" name="certificate.cname">
+                                                         <input type="text" class="form-control" id="cname"
+                                                                name="cpicName">
                                                     </div>
                                                      <div class="col-md-12">
                                                         <label for="cpic">Certificate Image</label>
-  													   <input type="file" id="cpic" name="certificate.cpic">
+                                                         <input type="file" id="cpic" name="cpicImg">
                                                     </div>
                                                     <div class="col-md-12 mgt10" >
                                                         <input type="submit" class="btn btn-primary" value="Sign up">
@@ -212,12 +214,14 @@
                                                      <input type="radio" name="person" id="interpret" value="Interpreter"checked>Interpreter
                                                       </div>
                                                     <div class="col-md-6">
-                                                        <input type="radio"  name="person" id="foreigner " value="Foreigner">Foreigner
+                                                        <input type="radio" name="person" id="foreigner"
+                                                               value="Foreigner">Foreigner
                                                     </div>
                                                 </div>
                                                  <div class="col-md-12">
                                                   <div class="col-md-8">
-                                                     <input type="radio"  name="person" id="admin " value="Administrator">Administrator
+                                                      <input type="radio" name="person" id="admin"
+                                                             value="Administrator">Administrator
                                                       </div>
                                                   </div>
                                                 <div class="col-md-12">

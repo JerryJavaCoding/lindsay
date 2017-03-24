@@ -101,21 +101,22 @@
                                 <td>Status</td>
                               </tr>
                               <%--request作用域中就是requestScope，session的就是sessionScope--%>
-                              <c:forEach var="translator" items="${requestScope.transalators}">
+                              <c:forEach var="tranDTO" items="${requestScope.tranDTOs}">
 
                                 <tr>
-                                  <td style="text-align:left;">${translator.Id}</td>
-                                  <td style="text-align:left;">${translator.tname}</td>
-                                  <td style="text-align:left;">${translator.tpwd}</td>
-                                  <td style="text-align:left;">${translator.tidno}</td>
-                                  <td style="text-align:left;">${translator.tsex}</td>
-                                  <td style="text-align:left;">${translator.tage}</td>
-                                  <td style="text-align:left;">${translator.tel}</td>
-                                  <td style="text-align:left;">${translator.temail}</td>
-                                  <td style="text-align:left;">${translator.tlanguage}</td>
-                                  <td style="text-align:left;">${translator.cname}</td>
-                                  <td style="text-align:left;">${translator.cpic}</td>
-                                  <td style="text-align:left;"><a href="/admin/deletetran/${translator.Id}">删除</a></td>
+                                  <td style="text-align:left;">${tranDTO.translator.Id}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.tname}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.tpwd}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.tidno}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.tsex}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.tage}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.tel}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.temail}</td>
+                                  <td style="text-align:left;">${tranDTO.translator.tlanguage}</td>
+                                  <td style="text-align:left;">${tranDTO.certificate.cname}</td>
+                                  <td style="text-align:left;"><img src="/upload/${tranDTO.certificate.cpic}"></td>
+                                  <td style="text-align:left;"><a
+                                          href="/admin/deletetran/${tranDTO.translator.Id}">删除</a></td>
                                 </tr>
                               </c:forEach>
                               </#list>

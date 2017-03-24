@@ -20,6 +20,7 @@ import java.lang.*;
 public class MainConfig extends JFinalConfig {
     @Override
     public void configConstant(Constants me) {
+
         PropKit.use("config.properties");
         me.setViewType(ViewType.JSP);
         me.setEncoding("UTF-8");

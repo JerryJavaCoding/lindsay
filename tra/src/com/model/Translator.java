@@ -6,4 +6,5 @@ import com.jfinal.plugin.activerecord.Model;
  */
 public class Translator extends Model<Translator>{
         public static final Translator dao=new Translator();
+
 }
