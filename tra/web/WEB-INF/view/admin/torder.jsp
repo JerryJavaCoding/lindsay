@@ -90,10 +90,13 @@
                                 <td>Translator Id</td>
                                 <td>订单Id</td>
                                 <td>Date</td>
+                                <td>Work</td>
                                 <td>Description</td>
                                 <td>Request</td>
                                 <td>Language</td>
                                 <td>Salary</td>
+                                <td>Deal</td>
+                                <td>Completed</td>
                                 <td>Status</td>
                               </tr>
                               <%--request作用域中就是requestScope，session的就是sessionScope--%>
@@ -102,11 +105,14 @@
                               <tr>
                                 <td style="text-align:left;">${forder.fid}</td>
                                 <td style="text-align:left;">${forder.Id}</td>
+                                <td style="text-align:left;">${forder.date}</td>
                                 <td style="text-align:left;">${forder.work}</td>
                                 <td style="text-align:left;">${forder.description}</td>
                                 <td style="text-align:left;">${forder.request}</td>
                                 <td style="text-align:left;">${forder.language}</td>
                                 <td style="text-align:left;">${forder.salary}</td>
+                                <td style="text-align:left;">${forder.dealing}</td>
+                                <td style="text-align:left;">${forder.completed}</td>
                                 <td style="text-align:left;"><a href="/admin/deletetorder?Id=${forder.Id}&fid=${forder.trid}">删除订单</a></td>
                                 </c:forEach>
                               </tr>

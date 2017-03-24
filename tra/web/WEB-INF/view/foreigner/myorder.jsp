@@ -93,25 +93,32 @@
                                                             <tbody>
                                                             <tr>
                                                                 <td>User Id</td>
+                                                                <td>Order Picker Id</td>
                                                                 <td>订单Id</td>
                                                                 <td>Date</td>
                                                                 <td>Description</td>
                                                                 <td>Request</td>
                                                                 <td>Language</td>
                                                                 <td>Salary</td>
+                                                                <td>Deal</td>
+                                                                <td>Completed</td>
                                                                 <td>Status</td>
+                                                                <td>Payment</td>
                                                             </tr>
                                                             <%--request作用域中就是requestScope，session的就是sessionScope--%>
                                                             <c:forEach var="forder" items="${requestScope.forders}">
 
                                                             <tr>
                                                                 <td style="text-align:left;">${forder.fid}</td>
+                                                                <td style="text-align:left;">${forder.trid}</td>
                                                                 <td style="text-align:left;">${forder.Id}</td>
                                                                 <td style="text-align:left;">${forder.work}</td>
                                                                 <td style="text-align:left;">${forder.description}</td>
                                                                 <td style="text-align:left;">${forder.request}</td>
                                                                 <td style="text-align:left;">${forder.language}</td>
                                                                 <td style="text-align:left;">${forder.salary}</td>
+                                                                <td style="text-align:left;">${forder.dealing}</td>
+                                                                <td style="text-align:left;">${forder.completed}</td>
                                                                 <c:if test="${forder.completed=='未完成'}">
                                                                     <td style="text-align:left;"><a
                                                                             href="/foreigner/deleteforder?Id=${forder.Id}&fid=${forder.fid}">取消订单</a>
@@ -135,7 +142,6 @@
                                                             <tr>
                                                                 <td>Translator Id</td>
                                                                 <td>Username</td>
-                                                                <td>Password</td>
                                                                 <td>ID No.</td>
                                                                 <td>Gender</td>
                                                                 <td>Age</td>
@@ -149,7 +155,6 @@
                                                                 <tr>
                                                                     <td style="text-align:left;">${translator.Id}</td>
                                                                     <td style="text-align:left;">${translator.tname}</td>
-                                                                    <td style="text-align:left;">${translator.tpwd}</td>
                                                                     <td style="text-align:left;">${translator.tidno}</td>
                                                                     <td style="text-align:left;">${translator.tsex}</td>
                                                                     <td style="text-align:left;">${translator.tage}</td>

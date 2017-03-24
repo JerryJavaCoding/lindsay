@@ -95,6 +95,7 @@
                                 <td>Foreigner Id</td>
                                 <td>订单Id</td>
                                 <td>Date</td>
+                                <td>Work</td>
                                 <td>Description</td>
                                 <td>Request</td>
                                 <td>Language</td>
@@ -107,6 +108,7 @@
                                 <tr>
                                   <td style="text-align:left;">${forder.fid}</td>
                                   <td style="text-align:left;">${forder.Id}</td>
+                                  <td style="text-align:left;">${forder.date}</td>
                                   <td style="text-align:left;">${forder.work}</td>
                                   <td style="text-align:left;">${forder.description}</td>
                                   <td style="text-align:left;">${forder.request}</td>

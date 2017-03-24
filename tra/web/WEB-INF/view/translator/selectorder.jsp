@@ -91,27 +91,32 @@
                                                     <div class="col-md-12">
                                                         <label for="date">Date</label>
                                                         <input type="text" class="form-control" id="date"
-                                                               name="forder.date" value="${forder.date}">
+                                                               name="forder.date" readonly value="${forder.date}">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label for="work">Work</label>
+                                                        <input type="text" class="form-control" id="work"
+                                                               name="forder.work" readonly value="${forder.work}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="description">Description</label>
                                                         <input type="text" class="form-control" id="description"
-                                                               name="forder.description" value="${forder.description}">
+                                                               name="forder.description" readonly value="${forder.description}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="request">Request</label>
                                                         <input type="text" class="form-control" id="request"
-                                                               name="forder.request" value="${forder.request}">
+                                                               name="forder.request" readonly value="${forder.request}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="language">Language</label>
                                                         <input type="text" class="form-control" id="language"
-                                                               name="forder.language" value="${forder.language}">
+                                                               name="forder.language" readonly value="${forder.language}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="salary">Salary</label>
                                                         <input type="text" class="form-control" id="salary"
-                                                               name="forder.salary" value="${forder.salary}">
+                                                               name="forder.salary" readonly value="${forder.salary}">
                                                     </div>
 
                                                     <%--<input type="radio" name="forder.dealing" value="已接单" >接单</td>--%>
@@ -120,33 +125,33 @@
                                                     <div class="col-md-12">
                                                         <label for="username">Username</label>
                                                         <input type="text" class="form-control" id="username"
-                                                               name="foreigner.fname" value="${foreigner.fname}">
+                                                               name="foreigner.fname" readonly value="${foreigner.fname}">
                                                     </div>
 
                                                     <div class="col-md-12">
                                                         <label for="fsex">Gender</label>
                                                         <input type="text" class="form-control" id="fsex"
-                                                               name="foreigner.fsex" value="${foreigner.fsex}">
+                                                               name="foreigner.fsex" readonly value="${foreigner.fsex}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="fage">Age</label>
                                                         <input type="text" class="form-control" id="fage"
-                                                               name="foreigner.fage" value="${foreigner.fage}">
+                                                               name="foreigner.fage" readonly value="${foreigner.fage}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="country">Country</label>
                                                         <input type="text" class="form-control" id="country"
-                                                               name="foreigner.fcountry" value="${foreigner.fcountry}">
+                                                               name="foreigner.fcountry" readonly value="${foreigner.fcountry}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="ftel">Tel</label>
                                                         <input type="text" class="form-control" id="ftel"
-                                                               name="foreigner.ftel" value="${foreigner.ftel}">
+                                                               name="foreigner.ftel" readonly value="${foreigner.ftel}">
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label for="femail">Email</label>
                                                         <input type="text" class="form-control" id="femail"
-                                                               name="foreigner.femail" value="${foreigner.femail}">
+                                                               name="foreigner.femail" readonly value="${foreigner.femail}">
                                                     </div>
 
 

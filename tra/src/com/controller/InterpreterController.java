@@ -74,7 +74,7 @@ public class InterpreterController extends Controller {
         Forder forder=getModel(Forder.class);
         Translator translator = getSessionAttr("translator");
         forder.set("trid",translator.get("Id"));
-        forder.set("dealing", "已接单");
+        forder.set("dealing", "picked up");
         forder.update();
         System.out.println("修改成功");
 //        render("myorder.jsp");//接单

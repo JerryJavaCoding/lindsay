@@ -19,6 +19,8 @@ public class ForeignerController extends Controller {
         int id = foreigner.get("Id");
         List forders = Forder.dao.find("SELECT * FROM forder WHERE fid=" + id);
         setAttr("forders", forders);
+        List translators = Translator.dao.find("SELECT * FROM translator where Id in (SELECT trid FROM forder where fid = " +id+ ")");
+        setAttr("translators", translators);
         render("myorder.jsp");
     }
 
@@ -76,7 +78,8 @@ public class ForeignerController extends Controller {
         System.out.println("删除成功");
         List forders = Forder.dao.find("SELECT * FROM forder WHERE fid='" + fid + "'");
         setAttr("forders", forders);
-        render("myorder.jsp");
+        index();
+
     }
 
     public void updatefpwd() {

@@ -101,15 +101,18 @@
                                                  <div class="col-md-12">
                                                     <label for="request">Request</label>
 													 <select name="forder.request">
-														 <option value="熟练">熟练</option>
-														 <option value="精通">精通</option>
+														 <option value="熟练">proficiency</option>
+														 <option value="精通">skillful</option>
 													 </select>
                                                 </div>
                                                  <div class="col-md-12">
                                                     <label for="language">Language</label>
 													 <select name="forder.language">
-														 <option value="en">en</option>
-														 <option value="cn">cn</option>
+														 <option value="en">English</option>
+														 <option value="jan">Japanese</option>
+														 <option value="ger">Germany</option>
+														 <option value="ita">Italian</option>
+														 <option value="por">Portuguese</option>
 													 </select>
 												 </div>
                                                  <div class="col-md-12">

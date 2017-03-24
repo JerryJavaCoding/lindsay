@@ -94,11 +94,13 @@
                                 <td>Foreigner Id</td>
                                 <td>订单Id</td>
                                 <td>Date</td>
+                                <td>Work</td>
                                 <td>Description</td>
                                 <td>Request</td>
                                 <td>Language</td>
                                 <td>Salary</td>
-                                <td>Status</td>
+                                <td>Deal</td>
+                                <td>Completed</td>
                               </tr>
                               <%--request作用域中就是requestScope，session的就是sessionScope--%>
                               <c:forEach var="forder" items="${requestScope.forders}">
@@ -106,12 +108,14 @@
                                 <tr>
                                   <td style="text-align:left;">${forder.fid}</td>
                                   <td style="text-align:left;">${forder.Id}</td>
+                                  <td style="text-align:left;">${forder.date}</td>
                                   <td style="text-align:left;">${forder.work}</td>
                                   <td style="text-align:left;">${forder.description}</td>
                                   <td style="text-align:left;">${forder.request}</td>
                                   <td style="text-align:left;">${forder.language}</td>
                                   <td style="text-align:left;">${forder.salary}</td>
                                   <td style="text-align:left;"> <input type="text" class="form-control" id="status" name="forder.dealing" readonly value="${forder.dealing}"></td>
+                                  <td style="text-align:left;">${forder.completed}</td>
                                 </tr>
                               </c:forEach>
                               </#list>
